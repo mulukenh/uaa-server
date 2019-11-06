@@ -24,7 +24,7 @@
 //			.exceptionHandling()
 //			.authenticationEntryPoint(getDigestEntryPoint())
 //			.and().authorizeRequests().antMatchers("/admin/**")
-//			.hasRole("ADMIN");
+//			.hasRole("ADMIN");			
 //	}
 //
 //	public DigestAuthenticationFilter getDigestAuthFilter() throws Exception {
