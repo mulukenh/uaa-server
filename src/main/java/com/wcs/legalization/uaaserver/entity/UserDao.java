@@ -6,20 +6,21 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "users")
-public class AppUser {
-
+public class UserDao {
 	@Id
 	private String username;
 	private String password;
-	private String authorities;
+	private String email;
+	private boolean enabled;
 	
-	public AppUser() {
+	public UserDao() {
 	}
 
-	public AppUser(String username, String password, String authorities) {
+	public UserDao(String username, String password, String email, boolean enabled) {
 		this.username = username;
 		this.password = password;
-		this.authorities = authorities;
+		this.setEmail(email);
+		this.setEnabled(enabled);
 	}
 
 	public String getUsername() {
@@ -38,11 +39,19 @@ public class AppUser {
 		this.password = password;
 	}
 
-	public String getAuthorities() {
-		return authorities;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setAuthorities(String authorities) {
-		this.authorities = authorities;
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	public boolean isEnabled() {
+		return enabled;
+	}
+
+	public void setEnabled(boolean enabled) {
+		this.enabled = enabled;
 	}
 }

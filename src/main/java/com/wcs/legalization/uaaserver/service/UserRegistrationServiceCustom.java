@@ -4,7 +4,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import com.wcs.legalization.uaaserver.entity.AppUser;
+import com.wcs.legalization.uaaserver.entity.UserDao;
 import com.wcs.legalization.uaaserver.repository.UserRepository;
 
 //@Service

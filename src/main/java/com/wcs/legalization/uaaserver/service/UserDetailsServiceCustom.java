@@ -7,7 +7,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import com.wcs.legalization.uaaserver.entity.AppUser;
+import com.wcs.legalization.uaaserver.entity.UserDao;
 import com.wcs.legalization.uaaserver.repository.UserRepository;
 
 @Service
@@ -18,7 +18,7 @@ public class UserDetailsServiceCustom implements UserDetailsService {
 	
 	@Override
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-		AppUser user = userRepository.findByUsername(username);
+		UserDao user = userRepository.findByUsername(username);
 		if (user == null) {
 			throw new UsernameNotFoundException(username);
 		}
