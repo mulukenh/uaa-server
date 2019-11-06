@@ -3,16 +3,22 @@ package com.wcs.legalization.uaaserver.dto;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 
+import com.wcs.legalization.uaaserver.validation.PasswordConfirm;
+import com.wcs.legalization.uaaserver.validation.UniqueEmail;
+import com.wcs.legalization.uaaserver.validation.UniqueUsername;
+
+@PasswordConfirm
 public class UserDto {
-	
 	@NotEmpty(message="Please enter your firstname")
 	private String firstname;
 	@NotEmpty(message="Please enter your lastname")
 	private String lastname;
 	@NotEmpty(message="Please enter a username")
+	@UniqueUsername
 	private String username;
 	@NotEmpty(message="Please enter an email")
 	@Email(message="Email is not valid")
+	@UniqueEmail
 	private String email;
 	@NotEmpty(message="Please enter a password")
 	private String password;

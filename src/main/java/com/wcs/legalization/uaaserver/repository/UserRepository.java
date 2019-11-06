@@ -8,4 +8,5 @@ import com.wcs.legalization.uaaserver.entity.UserDao;
 @Repository
 public interface UserRepository extends JpaRepository<UserDao, String> {
 	UserDao findByUsername(String username);
+	UserDao findByEmail(String email);
 }
