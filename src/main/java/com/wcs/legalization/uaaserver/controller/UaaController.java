@@ -1,8 +1,11 @@
 package com.wcs.legalization.uaaserver.controller;
 
+import java.security.Principal;
+
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -21,7 +24,7 @@ public class UaaController {
 	@Autowired
 	private UserRepository userRepository;
 	@Autowired
-	private PasswordEncoder passwordEncoder;
+	private PasswordEncoder passwordEncoder;	
 
     @GetMapping("/home")
     public String greetingForm(Model model) {
@@ -38,6 +41,7 @@ public class UaaController {
     	model.addAttribute("user", new UserDto());
     	return "register";
     }
+    
     @PostMapping("/register")
     public String register(@Valid @ModelAttribute("user") UserDto userDto, BindingResult result) {
     	if (result.hasErrors()) {

@@ -1,0 +1,13 @@
+server:
+  port: 8081
+  
+spring:
+  application:
+    name: uaa-server
+  cloud:
+    vault:
+      host: localhost
+      port: 8200
+      scheme: http 
+      authentication: TOKEN
+      token: s.DRgF6BEOUENt5oLTJf23CK7A
