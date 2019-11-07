@@ -4,9 +4,10 @@
 * user-persistence: Database added 
 * inputValidation: User registration input gets validated
 * introducingVault: Securing secret application data; 
- * Vault command: `./vault server -config vault.conf`
-* Set env variable on the new terminal: `export VAULT_ADDR=http://localhost:8200`
-* Initialize vault: `./vault operator init`
+ 	* Create vault.conf file in the directory where you unzip vault download and enter configuration in the file
+ 	* Vault command: `./vault server -config vault.conf`
+	* Set env variable on the new terminal: `export VAULT_ADDR=http://localhost:8200`
+	* Initialize vault: `./vault operator init`
 	* Check status: `./vault status`
 	* Unseal: `./vault operator unseal <unseal key>` (do this three time with different keys)
 	* Set environment variable for vault token: `export VAULT_TOKEN=<Initial Root Token>`
