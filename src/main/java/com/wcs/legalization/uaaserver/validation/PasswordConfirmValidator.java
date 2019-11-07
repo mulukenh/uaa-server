@@ -4,7 +4,6 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 import com.wcs.legalization.uaaserver.dto.UserDto;
-import com.wcs.legalization.uaaserver.repository.UserRepository;
 
 public class PasswordConfirmValidator implements ConstraintValidator<UniqueUsername, Object>{
 
