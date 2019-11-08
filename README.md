@@ -17,3 +17,10 @@
   		* add vault dependency - spring-cloud-vault-dependencies and spring-cloud-starter-vault-config
   		* create bootstrap.yml file and add vault config. (host: localhost, port: 8200, scheme: http, authentication: TOKEN, token: <Inital Root Token>) (		it won't work with application.properties and application name needs to be specified in this bootstrap.yml file)
   		* find a way not to put the master token on bootstrap.yml file. One way to do that is pass it as a command line argument during start up
+  	* To write multiple key value pair: 
+  		* Write key value pairs in json file: `{"<key1>": "<value1>", "<key2>": "<value2>" ... }`
+  		* Execute the command: `./vault write secret/<app name> @<file name>`. Eg. `./vault write secret/my-app @secret.json`
+* additionalLayersOfSecurity
+	* import mail dependency
+	* configure mail server 
+	* user event handlers 

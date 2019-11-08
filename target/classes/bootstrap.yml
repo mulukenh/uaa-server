@@ -4,6 +4,7 @@ server:
 spring:
   application:
     name: uaa-server
+
   cloud:
     vault:
       host: localhost

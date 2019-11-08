@@ -13,14 +13,13 @@ public class UserDao {
 	private String email;
 	private boolean enabled;
 	
-	public UserDao() {
-	}
+	public UserDao() {}
 
 	public UserDao(String username, String password, String email, boolean enabled) {
 		this.username = username;
 		this.password = password;
-		this.setEmail(email);
-		this.setEnabled(enabled);
+		this.email = email;
+		this.enabled = enabled;
 	}
 
 	public String getUsername() {
@@ -47,11 +46,11 @@ public class UserDao {
 		this.email = email;
 	}
 
-	public boolean isEnabled() {
+	public boolean isVerified() {
 		return enabled;
 	}
 
-	public void setEnabled(boolean enabled) {
+	public void setVerified(boolean enabled) {
 		this.enabled = enabled;
 	}
 }
